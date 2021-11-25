@@ -4,20 +4,42 @@
 <title>Jawad's Portfolio</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+<link id="theme" rel="stylesheet" href="./css/light.css">
 
+<script>
+  function toggleTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'css/light.css') {
+          theme.setAttribute('href', 'css/dark.css');
+      } else {
+          theme.setAttribute('href', 'css/light.css');
+      }
+  }
+
+  function sweetTheme() {
+      theme.setAttribute('href', 'css/sweet.css');  
+  }
+</script>
+</head>
+
+<body>
 
 <header>
   <h2>জাওয়াদ Jawad's Portfolio</h2>
 </header>
-
+<img src="img/idea.png" class="dark-mode" onclick='toggleTheme()'>
+<img src="img/cupcake.png" class="sweet-mode" onclick='sweetTheme()'>
 <section>
   <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Photos</a></li>
+        <li><a href="#">Classworks</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
@@ -26,11 +48,13 @@
     <h1>See You Again</h1>
     <h2>Wiz Khalifa ft Charlie Puth</h2>
     <p>
+      <img id="pw" src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/219646971/b044bda7-ed55-4071-af89-8ee5e34188c2/04746f32-5a6f-4066-b02e-e96a843106f6/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc">
+      <br/>
       It's been a long day without you, my friend<br/>
       And I'll tell you all about it when I see you again<br/>
       We've come a long way from where we began<br/>
       Oh, I'll tell you all about it when I see you again<br/>
-      When I see you again<br/>
+      When I see you again...<br/>
     </p>
   </article>
 </section>
